@@ -2,11 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const userRouter = require('./routers/userRouter');
+const taskRouter = require('./routers/taskRouter');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/users', userRouter);
+app.use('/tasks', taskRouter);
 
 const port = 3000;
 const mongoDBUrl = "mongodb+srv://dupanisha:fLGGL5Mb37ZqtxuO@cluster0.vbfvk.mongodb.net/";
